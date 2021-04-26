@@ -1,0 +1,25 @@
+html {
+    max-width: 800px;
+    margin: auto;
+    font-size: 100%;
+}
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+main {
+    min-height: 400px;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #333;
+    margin-bottom: 1rem;
+}
+
+footer {
+    border-top: 2px solid #333;
+}

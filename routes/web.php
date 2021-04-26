@@ -13,8 +13,32 @@ use App\Http\Controllers\HelloWorldController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
+});
+
+Route::get('/', function () {
+    return redirect('/home');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/dice', function () {
+    return view('dice');
+});
+
+Route::get('/dicehand', function () {
+    return view('dicehand');
+});
+
+Route::get('/game21', function () {
+    return view('game21');
+});
+
+Route::get('/yatzy', function () {
+    return view('yatzy');
 });
 
 
