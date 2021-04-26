@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
+use App\Http\Controllers\DiceController;
+use App\Http\Controllers\DiceHandController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,13 +27,12 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/dice', function () {
-    return view('dice');
-});
+// Route::get('/dice', function () {
+//     return view('dice');
+// });
 
-Route::get('/dicehand', function () {
-    return view('dicehand');
-});
+Route::match(['get', 'post'], '/dice', [DiceController::class, 'show']);
+Route::match(['get', 'post'], '/dicehand', [DiceHandController::class, 'show']);
 
 Route::get('/game21', function () {
     return view('game21');
