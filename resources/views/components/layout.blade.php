@@ -13,7 +13,7 @@
     <body>
         <header>
             <p><a href="home">Home</a></p>
-            <p><a href="dice">Dice</a></p>
+            <p><a href="dice">Die</a></p>
             <p><a href="dicehand">Dicehand</a></p>
             <p><a href="game21">Game 21</a></p>
             <p><a href="yatzy">Yatzy</a></p>

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\DiceController;
 use App\Http\Controllers\DiceHandController;
+use App\Http\Controllers\Game21Controller;
+use App\Http\Controllers\YatzyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,20 +29,18 @@ Route::get('/home', function () {
     return view('home');
 });
 
-// Route::get('/dice', function () {
-//     return view('dice');
-// });
-
 Route::match(['get', 'post'], '/dice', [DiceController::class, 'show']);
 Route::match(['get', 'post'], '/dicehand', [DiceHandController::class, 'show']);
 
-Route::get('/game21', function () {
-    return view('game21');
-});
+// Route::get('/game21', function () {
+//     return view('game21');
+// });
+Route::match(['get', 'post'], '/game21', [Game21Controller::class, 'show']);
 
-Route::get('/yatzy', function () {
-    return view('yatzy');
-});
+// Route::get('/yatzy', function () {
+//     return view('yatzy');
+// });
+Route::match(['get', 'post'], '/yatzy', [YatzyController::class, 'show']);
 
 
 // Added for mos example code
