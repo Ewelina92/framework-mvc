@@ -14,7 +14,7 @@ class DiceHandController extends Controller
      * @return \Illuminate\View\View
      */
     public function show(Request $request)
-    {   
+    {
         $diceHand = new DiceHandHandler();
         $data = $diceHand->playGame($request->all());
 

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace App\Models\Handlers;
+
 use App\Models\DiceModels\GraphicalDice;
 use App\Models\DiceModels\DiceHand;
 
@@ -38,7 +39,7 @@ class DiceHandHandler //implements GameHandlerInterface
             $this->diceHand->addDice(new GraphicalDice());
         }
         // roll the dice
-        $this->diceHand->roll(); 
+        $this->diceHand->roll();
 
         $result = "";
         // graphic representation of the dice
@@ -58,8 +59,7 @@ class DiceHandHandler //implements GameHandlerInterface
         if (!isset($amount["dice"])) {
             return $this->welcome();
         }
-    
+
         return $this->roll(intval($amount["dice"]));
     }
-
 }

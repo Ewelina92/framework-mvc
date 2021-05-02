@@ -14,7 +14,7 @@ class YatzyController extends Controller
      * @return \Illuminate\View\View
      */
     public function show(Request $request)
-    {   
+    {
         $yatzyHandler = new YatzyHandler();
         $data = $yatzyHandler->playGame();
 

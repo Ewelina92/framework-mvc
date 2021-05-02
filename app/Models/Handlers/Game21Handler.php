@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace App\Models\Handlers;
+
 use App\Models\DiceModels\{
     GraphicalDice,
     DiceHand
@@ -120,7 +121,7 @@ class Game21Handler
     private function showResult(string $winner, array $data): array
     {
         if (session()->has('rounds')) { // keep track of amount of rounds
-            session()->put('rounds', (intval(session('rounds'))+1));
+            session()->put('rounds', (intval(session('rounds')) + 1));
         }
 
         // initialize necessary variables after first round
@@ -132,7 +133,7 @@ class Game21Handler
 
         // keep track of winners and movement of bitcoin
         if ($winner === "player") {
-            session()->put('playerWins', (1+intval(session('playerWins'))));
+            session()->put('playerWins', (1 + intval(session('playerWins'))));
             session()->put("playerBitcoin", (intval(session('playerBitcoin')) + intval(session("currentBet"))));
             session()->put("computerBitcoin", (intval(session('computerBitcoin')) - intval(session("currentBet"))));
         } elseif ($winner === "computer") {

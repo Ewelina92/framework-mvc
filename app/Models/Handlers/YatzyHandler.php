@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace App\Models\Handlers;
+
 use App\Models\DiceModels\{
     Dice,
     GraphicalDice,
@@ -119,7 +120,7 @@ class YatzyHandler
                 array_push($temp, intval(request()->input("ydice" . $i)));
                 session()->put('savedDiceValuesYatzy', $temp);
                 // one fewer die to roll next turn
-                session()->put('diceToRollYatzy', session('diceToRollYatzy')-1);
+                session()->put('diceToRollYatzy', session('diceToRollYatzy') - 1);
             }
         }
 

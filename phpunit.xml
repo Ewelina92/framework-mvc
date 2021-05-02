@@ -16,6 +16,10 @@
         <include>
             <directory suffix=".php">./app</directory>
         </include>
+        <report>
+            <clover outputFile="build/coverage.clover"/>
+            <html outputDirectory="build/coverage" lowUpperBound="35" highLowerBound="70"/>
+        </report>
     </coverage>
     <php>
         <server name="APP_ENV" value="testing"/>

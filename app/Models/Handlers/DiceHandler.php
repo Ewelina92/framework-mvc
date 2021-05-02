@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace App\Models\Handlers;
+
 use App\Models\DiceModels\GraphicalDice;
 
 /**
@@ -48,8 +49,7 @@ class DiceHandler //implements GameHandlerInterface
         if (!isset($roll["dieRoll"])) {
             return $this->welcome();
         }
-    
+
         return $this->roll();
     }
-
 }
