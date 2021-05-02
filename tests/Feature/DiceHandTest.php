@@ -11,7 +11,6 @@ use App\Models\DiceModels\{
     GraphicalDice
 };
 
-
 /**
  * Test cases for the DiceHand class.
  */

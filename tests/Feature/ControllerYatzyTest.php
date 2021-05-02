@@ -28,7 +28,7 @@ class ControllerYatzyTest extends TestCase
     public function testControllerReturnsResponse()
     {
         $controller = new YatzyController();
-        
+
         $mockRequest = $this->createMock(Request::class);
         $res = $controller->show($mockRequest);
         $this->assertEquals("yatzy-welcome", $res->name());

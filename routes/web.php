@@ -6,6 +6,7 @@ use App\Http\Controllers\DiceController;
 use App\Http\Controllers\DiceHandController;
 use App\Http\Controllers\Game21Controller;
 use App\Http\Controllers\YatzyController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

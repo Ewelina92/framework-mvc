@@ -207,7 +207,6 @@ class GameTest extends TestCase
             "computerScore" => 0,
             "numDice" => 2,
         ]);
-        
 
         $result = $game->playGame();
 

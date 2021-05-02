@@ -28,7 +28,7 @@ class ControllerGame21Test extends TestCase
     public function testControllerReturnsResponse()
     {
         $controller = new Game21Controller();
-        
+
         $mockRequest = $this->createMock(Request::class);
         $res = $controller->show($mockRequest);
         $this->assertEquals("game21", $res->name());

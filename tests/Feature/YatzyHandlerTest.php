@@ -126,7 +126,7 @@ class YatzyHandlerTest extends TestCase
                 6 => null,
             ]
         ]);
-        
+
         request()->merge([
             "rollAgain" => "roll",
             "ydice1" => "6",
