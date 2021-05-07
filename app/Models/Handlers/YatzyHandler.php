@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models\Handlers;
 
+use App\Models\Highscore;
 use App\Models\DiceModels\{
     Dice,
     GraphicalDice,
@@ -217,6 +218,11 @@ class YatzyHandler
         }
 
         $totalScore = session("sum") + session("bonus");
+
+        $highscore = new Highscore();
+        $highscore->score = $totalScore;
+        $highscore->save();
+
         return $this->showEnding($totalScore);
     }
 
