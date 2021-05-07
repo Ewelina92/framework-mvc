@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\DiceController;
@@ -32,17 +33,14 @@ Route::get('/home', function () {
 
 Route::match(['get', 'post'], '/dice', [DiceController::class, 'show']);
 Route::match(['get', 'post'], '/dicehand', [DiceHandController::class, 'show']);
-
-// Route::get('/game21', function () {
-//     return view('game21');
-// });
 Route::match(['get', 'post'], '/game21', [Game21Controller::class, 'show']);
-
-// Route::get('/yatzy', function () {
-//     return view('yatzy');
-// });
 Route::match(['get', 'post'], '/yatzy', [YatzyController::class, 'show']);
 
+Route::get('/books', function () {
+    return view('books', [
+        'books' => Book::all()
+    ]);
+});
 
 // Added for mos example code
 Route::get('/hello-world', function () {
