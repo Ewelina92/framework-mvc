@@ -17,6 +17,7 @@
             <p><a href="dicehand">Dicehand</a></p>
             <p><a href="game21">Game 21</a></p>
             <p><a href="yatzy">Yatzy</a></p>
+            <p><a href="highscores">Highscores</a></p>
             <p><a href="books">Books</a></p>
         </header>
         <main>

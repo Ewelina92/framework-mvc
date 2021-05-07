@@ -1,6 +1,9 @@
 <?php
 
-use App\Models\Book;
+use App\Models\{
+    Book,
+    Highscore
+};
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\DiceController;
@@ -35,6 +38,12 @@ Route::match(['get', 'post'], '/dice', [DiceController::class, 'show']);
 Route::match(['get', 'post'], '/dicehand', [DiceHandController::class, 'show']);
 Route::match(['get', 'post'], '/game21', [Game21Controller::class, 'show']);
 Route::match(['get', 'post'], '/yatzy', [YatzyController::class, 'show']);
+
+Route::get('/highscores', function () {
+    return view('highscores', [
+        'scores' => Highscore::all()->sortByDesc('score')
+    ]);
+});
 
 Route::get('/books', function () {
     return view('books', [
